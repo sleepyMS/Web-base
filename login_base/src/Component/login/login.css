@@ -35,13 +35,13 @@ a {
 /* 로그인 박스 시작 */
 .login-box {
   background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2); /* 선두께 선종류 (R, G, B, A(투명도)) */
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 가로이동 세로이동 퍼짐정도 (R, G, B, A(투명도)) */
   width: 420px;
   color: white;
   border-radius: 10px;
-  padding: 30px 40px;
+  padding: 30px 40px; /* 가로 세로 */
 }
 
 .login-box h1 {
@@ -51,7 +51,7 @@ a {
 
 /* ID & Password 시작 */
 .login-box .input-box {
-  position: relative;
+  position: relative; /* 하위의 position영역 지정 */
   width: 100%;
   height: 50px;
   margin: 30px 0;
@@ -63,11 +63,11 @@ a {
   background-color: transparent;
   outline: none;
   border: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2); /* R, G, B, A(투명도) */
   border-radius: 40px;
   font-size: 16px;
   color: white;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 20px; /* 상, 우, 하, 좌 -> 위에부터 시계방향으로 진행 */
 }
 
 .login-box .input-box > input::placeholder {
@@ -77,8 +77,10 @@ a {
 .login-box .input-box > box-icon {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* 왼쪽상단 모서리 지점을 기준으로 위에서 50% */
+  transform: translateY(
+    -50%
+  ); /* top은 모서리를 기준으로 하기 때문에 아이콘 크기의 절반만큼 위로 이동 */
   font-size: 20px;
 }
 /* ID & Password 끝 */
@@ -88,7 +90,7 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
-  margin: -15px 0 15px;
+  margin: -15px 0 15px; /* 상 좌우 하 */
 }
 
 .remember-forgod > label > input {
